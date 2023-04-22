@@ -6,7 +6,7 @@ const context = canvas.getContext('2d')
 const raioDaBola = 10
 const alturaDaRaquete = 10
 const larguraDaRaquete = 75
-const contagemDeBlocosEmLinha = 5
+const contagemDeBlocosEmLinha = 2
 const contagemDeBlocosEmColuna = 2
 const larguraDoBloco = 75
 const alturaDoBloco = 20
@@ -85,6 +85,8 @@ function detectaColisao() {
               context.clearRect(0, 0, canvas.width, canvas.height)
               desenhaBlocos2()  
               dx += dx +1
+              x = canvas.width / 2
+        y = canvas.height - 30
 
             }else if (pontosAcumulado  == ( (levelv +1) *(contagemDeBlocosEmLinha * contagemDeBlocosEmColuna))){              
               alert('Você ganhou, parabéns')                          
